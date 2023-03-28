@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "dump env context"
-        run: echo '{{ env }}' | jq
+        run: echo '{{ env }}'
         shell: bash
       - name: "dump github context"
-        run: echo '{{ github }}' | jq
+        run: echo '{{ github }}'
         shell: bash
