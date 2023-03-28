@@ -13,5 +13,7 @@ jobs:
         run: echo '{{ toJson(env) }}'
         shell: bash
       - name: "dump github context"
-        run: echo '{{ toJson(github) }}'
-        shell: bash
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
